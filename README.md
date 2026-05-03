@@ -300,6 +300,3 @@ Dengan langkah ini:
 * Load balancing melalui Service
 * Skalabilitas menggunakan replicas
 * Simulasi environment production secara lokal
-
----
-```
