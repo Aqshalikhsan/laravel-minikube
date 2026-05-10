@@ -12,14 +12,14 @@ spec:
       labels:
         app: mysql
     spec:
-      containers:
-      - name: mysql
-        image: mysql:8
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: root
+      containers: # Level 1
+      - name: mysql # Level 2 (pake strip)
+        image: mysql:8.0
+        env:        # Level 3 (HARUS menjorok ke dalam 'name: mysql')
         - name: MYSQL_DATABASE
-          value: laravel
+          value: laravel_k8s
+        - name: MYSQL_ROOT_PASSWORD
+          value: "rootpassword"
         ports:
         - containerPort: 3306
 ---
